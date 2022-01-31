@@ -1,13 +1,49 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+:root {
+  --clr-white: #fafafa;
+  --clr-whiter: #ffffff;
+  --clr-gray-lighter: #ebebeb;
+
+  --clr-gray-light: #e5e5e5;
+  --clr-gray-dark: #8c8c8c;
+  --clr-black: #242424;
+  --ff-primary: "IBM Plex Sans";
+  --ff-secondary: "Playfair Display";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: var(--ff-primary);
+  color: var(--clr-black);
+}
+main,
+header,
+footer {
+  padding: 0 min(42.5rem, 10%);
+}
+h1 {
+  font-family: var(--ff-secondary);
+  font-size: 5.6rem;
+  font-weight: 700;
+}
+@media (min-width: 1600px) {
+  body {
+    /* padding: 0 min(42.5rem, 20%); */
+  }
+}
+@media (max-width: 1250px) {
+  html {
+    font-size: 55%;
+  }
 }
