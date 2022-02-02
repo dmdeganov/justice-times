@@ -1,21 +1,22 @@
 import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import Button from "../components/Button";
-import { useSelector } from "react-redux";
+import AvatarUpload from "../components/AvatarUpload";
 import { getCurrenUserData } from "../utils/selectorFns";
 import "./Profile.scss";
-import AvatarUpload from "../components/AvatarUpload";
 import { editProfile } from "../slices/userSlice";
-import { useDispatch } from "react-redux";
 const Profile = () => {
   const {
     firstname: firstnameRedux,
     lastname: lastnameRedux,
     avatar,
     _id: id,
+    descriptionRedux = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem recusandae reiciendis quas non necessitatibus esse blanditiis iure soluta quidem quam doloremque eaque molestiae rem nesciunt, veritatis dicta aut! Optio, veniam",
   } = useSelector(getCurrenUserData);
   const [imagePath, setImagePath] = useState(avatar);
   const [firstname, setFirstname] = useState(firstnameRedux);
   const [lastname, setLastname] = useState(lastnameRedux);
+  const [description, setDescription] = useState(descriptionRedux);
   const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
@@ -58,7 +59,8 @@ const Profile = () => {
             <textarea
               name='description'
               type='text'
-              placeholder='Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptate iusto enim cumque reprehenderit sapiente iste. '
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
             />
           </div>
           <Button

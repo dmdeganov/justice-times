@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+import styled from "styled-components";
 import Button from "../components/Button";
 import { login } from "../slices/userSlice";
 import { getUsers } from "../utils/selectorFns";

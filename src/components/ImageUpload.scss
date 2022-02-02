@@ -1,6 +1,8 @@
 .upload-form {
   .message {
     font-size: 1.8rem;
+    width: 100%;
+    text-align: center;
   }
   display: flex;
   flex-direction: column;
@@ -25,7 +27,14 @@
     justify-content: space-around;
   }
 }
-
+@media (max-width: 400px) {
+  .preview-container {
+    max-width: 30rem;
+  }
+  .buttons {
+    max-width: 30rem;
+  }
+}
 // .preview-container p {
 //   text-align: center;
 //   font-size: 1.2rem;

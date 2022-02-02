@@ -1,17 +1,17 @@
 import "./App.css";
 import React, { useEffect } from "react";
-import Header from "./components/Header";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import MainPage from "./pages/MainPage";
-import Footer from "./components/Footer";
 import Signup from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
 import UserArticles from "./pages/UserArticles";
-import { isLogined, usersLoaded } from "./utils/selectorFns";
-import { useSelector, useDispatch } from "react-redux";
 import AddArticle from "./pages/AddArticle";
 import Profile from "./pages/Profile";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import { login } from "./slices/userSlice";
+import { isLogined, usersLoaded } from "./utils/selectorFns";
 
 function App() {
   const dispatch = useDispatch();

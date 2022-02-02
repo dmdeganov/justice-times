@@ -11,7 +11,7 @@ export const articlesLoaded = (state) => {
 };
 export const getUsers = (state) => state.users.users;
 export const getArticles = (state) => state.articles.articles;
-export const getArticlesbyAuthorId = (state) =>
+export const getUserArticles = (state) =>
   state.articles.articles.filter(
     (article) => article.authorId === state.users.currentUserId
   );
@@ -21,6 +21,3 @@ export const getCurrenUserData = (state) => {
 
   return userData;
 };
-// export const getAuthorData = (state, id) => {
-//   return state.users.users.find((user) => user._id === id);
-// };

@@ -1,11 +1,10 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
 import hero from "../images/title.png";
 import Button from "./Button";
 import { isLogined } from "../utils/selectorFns";
-import { Link, useLocation } from "react-router-dom";
 import { logout } from "../slices/userSlice";
-import { useDispatch } from "react-redux";
 import "./Header.scss";
 
 const Header = () => {

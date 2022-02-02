@@ -34,7 +34,7 @@ footer {
 }
 h1 {
   font-family: var(--ff-secondary);
-  font-size: 5.6rem;
+  font-size: 4.5rem;
   font-weight: 700;
 }
 @media (min-width: 1600px) {
@@ -48,6 +48,9 @@ h1 {
   html {
     font-size: 55%;
   }
+  h1 {
+    font-size: 3.5rem;
+  }
 }
 @media (max-width: 850px) {
   html {
@@ -59,5 +62,15 @@ h1 {
   header,
   footer {
     padding: 0 4rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 500px) {
+  main,
+  header,
+  footer {
+    padding: 0 2rem;
   }
 }
