@@ -9,15 +9,11 @@ import { getUsers } from "../utils/selectorFns";
 
 const LoginPage = () => {
   const users = useSelector(getUsers);
-  console.log(users);
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [emailErr, setEmailErr] = useState("");
   const [passwordErr, setPasswordErr] = useState("");
   const loginHandler = (e) => {
-    // console.log(e);
-
     e.preventDefault();
     const [{ value: email }, { value: password }] = e.target;
     const existingUser = users.find((user) => user.email === email);

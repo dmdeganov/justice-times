@@ -17,7 +17,7 @@ const MainArticle = ({
   category = "Typography";
   title = "Humane Typography in the Digital Age";
   text =
-    "Human beings aren’t perfect. Perfection is something that will always elude us. There will always be a small part of humanity in everything we do. No matter how small that part, we should make sure that it transcends the limits of the medium. We have to think about the message first. What typeface should we use and why? Does the typeface match the message and what?";
+    "Human beings aren’t perfect. Perfection is something that will always elude us. There will always be a small part of humanity in everything we do. No matter how small that part, we should make sure that it transcends the limits of the medium. ";
   author = "Janay Wright";
   date = "Jun 13";
   timeToRead = 5;

@@ -5,13 +5,12 @@ import { getArticlesbyAuthorId } from "../utils/selectorFns";
 
 const UserArticles = () => {
   const userArticles = useSelector(getArticlesbyAuthorId);
-  console.log(userArticles);
 
   return (
-    <div>
+    <main>
       <h1>My Articles</h1>
       <ArticleList articles={userArticles} />
-    </div>
+    </main>
   );
 };
 

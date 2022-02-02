@@ -30,7 +30,7 @@ body {
 main,
 header,
 footer {
-  padding: 0 min(42.5rem, 10%);
+  padding: 0 10%;
 }
 h1 {
   font-family: var(--ff-secondary);
@@ -38,12 +38,26 @@ h1 {
   font-weight: 700;
 }
 @media (min-width: 1600px) {
-  body {
-    /* padding: 0 min(42.5rem, 20%); */
+  main,
+  header,
+  footer {
+    padding: 0 15%;
   }
 }
 @media (max-width: 1250px) {
   html {
     font-size: 55%;
+  }
+}
+@media (max-width: 850px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 950px) {
+  main,
+  header,
+  footer {
+    padding: 0 4rem;
   }
 }

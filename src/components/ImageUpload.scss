@@ -1,0 +1,32 @@
+.upload-form {
+  .message {
+    font-size: 1.8rem;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: start;
+  .preview-container {
+    margin: 20px auto 0 auto;
+    width: 45rem;
+    height: auto;
+    border: 1px white solid;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  .buttons {
+    margin: 1.5rem auto 3rem;
+    width: 45rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+  }
+}
+
+// .preview-container p {
+//   text-align: center;
+//   font-size: 1.2rem;
+// }

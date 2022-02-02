@@ -1,0 +1,51 @@
+.profile {
+  display: grid;
+  grid-template-columns: 1.3fr 2fr;
+  grid-gap: 4rem;
+  height: 38.2rem;
+
+  label {
+    font-size: 1.4rem;
+    display: inline-block;
+    margin-bottom: 1.2rem;
+  }
+  input,
+  textarea {
+    border: 1px solid #e1e1e1;
+    font-size: 1.6rem;
+    color: var(--clr-black);
+    padding: 1rem 1rem;
+    &:focus {
+      outline: 1px solid #e1e1e1;
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .firstname,
+    .lastname {
+      display: inline-block;
+      width: calc((100% - 3.2rem) / 2);
+
+      input {
+        height: 4.7rem;
+        width: 100%;
+      }
+    }
+    .firstname {
+      margin-right: 3.2rem;
+    }
+    .description {
+      // align-self: start;
+
+      textarea {
+        resize: none;
+        display: block;
+        height: 15.5rem;
+        width: 100%;
+      }
+    }
+  }
+}

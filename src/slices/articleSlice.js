@@ -3,6 +3,7 @@ import {
   //   createSelector,
   createAsyncThunk,
 } from "@reduxjs/toolkit";
+import { server } from "../utils/variables";
 const initialState = {
   articles: [],
   sendStatus: "idle",
@@ -43,7 +44,7 @@ const articlesSlice = createSlice({
 
 export const fetchArticles = createAsyncThunk("articles/fetch", async () => {
   try {
-    const response = await fetch("http://localhost:9000/articles/");
+    const response = await fetch(`${server}/articles/`);
     const articles = await response.json();
     return articles;
   } catch (err) {
@@ -54,7 +55,7 @@ export const addArticle = createAsyncThunk("articles/", async (article) => {
   console.log(article);
 
   try {
-    const response = await fetch("http://localhost:9000/articles/", {
+    const response = await fetch(`${server}/articles/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

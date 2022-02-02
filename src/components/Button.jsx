@@ -12,11 +12,13 @@ const Button = ({ theme, children, onClick, width }) => {
 export default Button;
 const ButtonWrapper = styled.button`
   background-color: ${(props) => {
-    if (props.theme === "black") return "#242424";
+    if (props.theme === "black" || props.theme === "blackWithBlackBorder")
+      return "#242424";
     if (props.theme === "white" || props.theme === "disabled") return "#FFF";
   }};
   color: ${(props) => {
-    if (props.theme === "black") return "#FFF";
+    if ((props.theme === "black") | (props.theme === "blackWithBlackBorder"))
+      return "#FFF";
     if (props.theme === "white") return "#242424";
     if (props.theme === "disabled") return "#e5e5e5";
   }};
@@ -24,6 +26,7 @@ const ButtonWrapper = styled.button`
   border-color: ${(props) => {
     if (props.theme === "black") return "#FFF";
     if (props.theme === "white") return "#242424";
+    if (props.theme === "blackWithBlackBorder") return "#242424";
     if (props.theme === "disabled") return "#e5e5e5";
   }};
   font-size: 1.6rem;
@@ -35,5 +38,7 @@ const ButtonWrapper = styled.button`
 
   height: 4.7rem;
   font-family: var(--ff-primary);
-  cursor: pointer;
+  cursor: ${(props) => {
+    return props.theme !== "disabled" ? "pointer" : "auto";
+  }};
 `;
